@@ -64,7 +64,7 @@ namespace Computer_club
             var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
             if (httpResponse.StatusCode != HttpStatusCode.OK)
             {
-                throw new Exception("Ошибка при удалении пользователя");
+                throw new Exception("Ошибка удаления пользователя");
             }
         }
 
@@ -216,7 +216,7 @@ namespace Computer_club
             var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
             if (httpResponse.StatusCode != HttpStatusCode.OK)
             {
-                throw new Exception("Ошибка при отправке сообщения");
+                throw new Exception("Ошибка отправления сообщения");
             }
         }
 
