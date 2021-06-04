@@ -1,0 +1,149 @@
+﻿<UserControl x:Class="Computer_club.View.UserControlls.InformationUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Computer_club.View.UserControlls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <StackPanel>
+        <TextBlock Text="Information" Foreground="White" FontSize="28" Margin="0,0,0,20">
+            <TextBlock.Effect>
+                <DropShadowEffect/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+        <StackPanel Orientation="Horizontal">
+            <Border Width="400" Height="200">
+
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color=" #5bc3ff" Offset="0.0"/>
+                        <GradientStop Color="#3aa0ff" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,400,200"/>
+                </Border.Clip>
+
+                <Grid>
+                    <StackPanel>
+                        <TextBlock 
+                               Foreground="White" FontSize="26" Margin="20,10,10,0">
+                            <TextBlock.Effect>
+                                <DropShadowEffect/>
+                            </TextBlock.Effect>
+                            World Leader Of <LineBreak/> Computers clubs
+                        </TextBlock>
+
+                        <TextBlock Text="Let's play with us !" Foreground="White" FontSize="16" Margin="20,10,10,0"/>
+                    </StackPanel>
+
+                    <Image Source="/Images/skeleton.png" Width="150" Height="150" VerticalAlignment="Bottom" HorizontalAlignment="Right" RenderTransformOrigin="0.5,0.5" Margin="0,0,-30,-34">
+                        <Image.RenderTransform>
+                            <TransformGroup>
+                                <RotateTransform Angle="-20.086"/>
+                            </TransformGroup>
+                        </Image.RenderTransform>
+                    </Image>
+                </Grid>
+            </Border>
+
+            <Border Width="200" Height="200" CornerRadius="10" Margin="45,0,0,0">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#000000" Offset="0.0"/>
+                        <GradientStop Color="#000000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+                
+                <Grid Margin="5 5 5 5">
+                    <MediaElement   x:Name="WithUs" Stretch="Fill" LoadedBehavior="Play" UnloadedBehavior="Manual" MediaEnded="WithUs_MediaEnded" >
+                    </MediaElement>
+                    <Label Content="With Us" Foreground="White" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Top">
+                        <Label.Effect>
+                            <DropShadowEffect/>
+                        </Label.Effect>
+                    </Label>
+                    <Label Content="{Binding CountOfPeople}" FontSize="42" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+                </Grid>
+               
+                
+                <!--<Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    
+                </Grid>-->
+            </Border>
+        </StackPanel>
+
+        <StackPanel>
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="15,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <TextBlock Text="More Information" Foreground="White" FontSize="24" Margin="0,0,0,10">
+                <TextBlock.Effect>
+                    <DropShadowEffect/>
+                </TextBlock.Effect>
+            </TextBlock>
+            <StackPanel Orientation="Horizontal" >
+                <Border Width="150" Height="150" Background="#844eff" CornerRadius="10" Margin="0">
+                    <StackPanel>
+                        <Label Content="Profile" Foreground="White" FontSize="20">
+                            <Label.Effect>
+                                <DropShadowEffect/>
+                            </Label.Effect>
+                        </Label>
+                        <TextBlock TextWrapping="Wrap" FontSize="16" Height="110" Foreground="White" Margin="5">
+                               Here you can see your account list of orders and top up your account
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <Border Width="150" Height="150" Background="#4e99ff" CornerRadius="10">
+                    <StackPanel>
+                        <Label Content="Reservation" Foreground="White" FontSize="20">
+                            <Label.Effect>
+                                <DropShadowEffect/>
+                            </Label.Effect>
+                        </Label>
+                        <TextBlock FontSize="16" Height="110" Foreground="White" Margin="5" TextWrapping="Wrap">
+                               Here you can make an order and pay for it. Have a good game!
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <Border Width="150" Height="150" Background="#22b34d" CornerRadius="10">
+                    <StackPanel>
+                        <Label Content="Computers" Foreground="White" FontSize="20">
+                            <Label.Effect>
+                                <DropShadowEffect/>
+                            </Label.Effect>
+                        </Label>
+                        <TextBlock FontSize="16" Height="110" Foreground="White" TextWrapping="Wrap" Margin="5">
+                               Access to view the list of computers all information about them
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+
+                <Border Width="150" Height="150" Background="#bec73c" CornerRadius="10">
+                    <StackPanel>
+                        <Label Content="Location" Foreground="White" FontSize="20" Margin="0,0,0.4,0">
+                            <Label.Effect>
+                                <DropShadowEffect/>
+                            </Label.Effect>
+                        </Label>
+                        <TextBlock FontSize="16" Height="110" Foreground="White" Margin="5" TextWrapping="Wrap">
+                               Location of this establishment
+                        </TextBlock>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
